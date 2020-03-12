@@ -1,0 +1,597 @@
+/*  common.css of MoinMoin theme "sinorca4moin" by David Linke.
+    $Id: common.css 157 2007-12-29 21:31:15Z linke $
+*/
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lora'), url('lora.woff') format('woff');
+}
+
+html {
+	background-color: white;
+	color: black;
+	font-family: 'Lora', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	margin: 0;
+	padding: 0;
+
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5 {
+	/* margin: 1em 0 0.5em 0; */
+       margin: 0.65em 0 0.5em 0;
+	padding: 0px 0px 2px;
+       font-family: 'DejaVu Sans', Verdana, Arial, Helvetica, sans-serif;
+        font-weight: bold;
+	color: black;
+	line-height: 1.2em;
+	/* border-bottom: 2px solid rgb(100,135,220);
+	border-left: 1px solid rgb(100,135,220); */
+}	
+ /* h1 war 1.8 */
+h1 {font-size: 1.7em; }
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.35em;}
+h4, h5 {font-size: 1em;}
+
+/* title of the current wiki-page should not be displayed as list */
+#pagelocation {
+    margin: 0;
+    font-size: 1.0em;
+    font-weight: normal;
+    line-height: 1.0em;
+
+}
+    #pagelocation li {
+    display: inline;
+    list-style: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+/* Links */
+/*
+a.www:before {content: url(../img/moin-www.png); margin: 0 0.2em;}
+a.http:before {content: url(../img/moin-www.png); margin: 0 0.2em;}
+a.https:before {content: url(../img/moin-www.png); margin: 0 0.2em;}
+a.file:before {content: url(../img/moin-ftp.png); margin: 0 0.2em;}
+a.ftp:before {content: url(../img/moin-ftp.png); margin: 0 0.2em;}
+a.nntp:before {content: url(../img/moin-news.png); margin: 0 0.2em;}
+a.news:before {content: url(../img/moin-news.png); margin: 0 0.2em;}
+a.telnet:before {content: url(../img/moin-telnet.png); margin: 0 0.2em;}
+a.irc:before,a.ircs:before {content: url(../img/moin-telnet.png); margin: 0 0.2em;}
+a.mailto:before {content: url(../img/moin-email.png); margin: 0 0.2em;}
+a.attachment:before {content: url(../img/moin-attach.png); margin: 0 0.2em;}
+a.badinterwiki:before {content: url(../img/moin-inter.png); margin: 0 0.2em;}
+a.interwiki:before {content: url(../img/moin-inter.png); margin: 0 0.2em;}
+*/
+
+li p {
+	margin: .25em 0;
+}
+
+li.gap {
+	margin-top: 0.5em;
+}
+
+a, img, img.drawing {
+	border: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+/* fix problem with small font for inline code */
+tt {
+	font-size: 1.25em;
+}
+
+pre {
+	padding: 5px;
+	border: 1px solid #c0c0c0;
+	font-family: courier, monospace;
+	white-space: pre;
+	/* begin css 3 or browser specific rules - do not remove!
+	see: http://forums.techguy.org/archive/index.php/t-249849.html */
+    	white-space: pre-wrap;
+	/* word-wrap: break-word; */
+	/* white-space: -moz-pre-wrap; */
+	/* white-space: -pre-wrap; */
+	/* white-space: -o-pre-wrap; */
+	/* end css 3 or browser specific rules */
+}
+
+pre.comment {
+    background-color: #CCCCCC;
+    color: red;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+pre.comment:before {
+    content: url(../img/attention.png);
+}
+
+/* .comment css definition must be top of .red/.green/.blue or it won't work */
+.comment { color: #555555; background-color: #DDDDFF; }
+
+.red { background-color: #FFCCCC; }
+.green { background-color: #CCFFCC; }
+.blue { background-color: #CCCCFF; }
+
+.solid { border: 2px solid #000000; padding: 2px; }
+.dashed { border: 2px dashed #000000; padding: 2px; }
+.dotted { border: 2px dotted #000000; padding: 2px; }
+
+table {
+	margin: 0.5em 0;
+	font-size: 1em; /* Required to get correct size with GUI editor */
+	border-collapse: collapse;
+}
+
+th, td
+{
+	padding: 0.25em;
+	border: 1px solid #c0c0c0;
+}
+
+td p {
+	margin: 0;
+	padding: 0;
+}
+
+/* standard rule ---- */
+hr {
+	height: 1px;
+	background-color: #c0c0c0;
+	border: none;
+}
+
+/* custom rules ----- to ---------- */
+.hr1 {height: 2px;}
+.hr2 {height: 3px;}
+.hr3 {height: 4px;}
+.hr4 {height: 5px;}
+.hr5 {height: 6px;}
+.hr6 {height: 7px;}
+
+/* Replacement for deprecated html 3 <u> element and html 4 <strike> */
+.u {text-decoration: underline;}
+.strike {text-decoration: line-through;}
+
+.footnotes ol {
+	padding: 0 2em;
+	margin: 0 0 1em;
+}
+
+.footnotes li {
+}
+
+
+/* eye catchers */
+.warning 
+{
+	color: red;
+}
+
+.error 
+{
+	color: red;
+}
+
+strong.highlight 
+{
+	background-color: #ffcc99;
+	padding: 1pt;
+}
+
+
+/* Recent changes */
+
+div.recentchanges table {
+	border: 1px solid #e5e5e5; 
+}
+
+.recentchanges p {
+	margin: 0.25em;
+}
+
+.recentchanges td {
+	border: none;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	vertical-align: top;
+}
+
+.rcdaybreak {
+	background-color: #e5e5e5;
+}
+
+.rcdaybreak td a {
+	font-size: 0.88em;
+}
+
+.rcicon1, .rcicon2 {
+	text-align: center;
+}
+
+.rcpagelink {
+	width: 33%;
+}
+
+.rctime {
+	font-size: 0.88em;
+	white-space: nowrap;
+}
+
+.rceditor {
+	white-space: nowrap;
+	font-size: 0.88em;
+}
+
+.rccomment {
+	width: 66%;
+	color: gray;
+	font-size: 0.88em;
+}
+
+.rcrss {
+	float: right;
+}
+
+.recentchanges[dir="rtl"] .rcrss {
+	float: left;
+}
+
+/* User Preferences */
+
+.userpref table, .userpref td {
+	border: none;
+}
+
+/* CSS for new code_area markup used by Colorizer and ParserBase */
+
+div.codearea { /* the div makes the border */
+	margin: 0.5em 0;
+	padding: 0;
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	color: black;
+}
+
+div.codearea pre { /* the pre has no border and is inside the div */
+	margin: 0;
+	padding: 10pt;
+	border: none;
+}
+
+a.codenumbers { /* format of the line numbering link */
+	margin: 0 10pt;
+	font-size: 0.85em;
+	color: gray;
+}
+
+/* format of certain syntax spans */
+div.codearea pre span.LineNumber {color: gray;}
+div.codearea pre span.ID         {color: #000000;}
+div.codearea pre span.Operator   {color: #0000C0;}
+div.codearea pre span.Char       {color: #004080;}
+div.codearea pre span.Comment    {color: #008000;}
+div.codearea pre span.Number     {color: #0080C0;}
+div.codearea pre span.String     {color: #004080;}
+div.codearea pre span.SPChar     {color: #0000C0;}
+div.codearea pre span.ResWord    {color: #A00000;}
+div.codearea pre span.ConsWord   {color: #008080; font-weight: bold;}
+div.codearea pre span.Error      {color: #FF8080; border: solid 1.5pt #FF0000;}
+div.codearea pre span.ResWord2   {color: #0080ff; font-weight: bold;}
+div.codearea pre span.Special    {color: #0000ff;}
+div.codearea pre span.Preprc     {color: #803999;}
+
+/* for diff parser */
+div.codearea pre span.DiffAdded   {color: #4876FF;}
+div.codearea pre span.DiffRemoved {color: #FF0000;}
+div.codearea pre span.DiffChanged {color: #FF7F50;}
+div.codearea pre span.DiffSeparator {color: #228B22; font-weight: bold}
+
+/* pageinfo */
+.info {
+    float: right;
+    font-size: 0.8em;
+    font-style:italic;
+    color: gray;
+}
+
+#pageinfo {
+    margin-top: 2em;
+    clear:right;
+}
+
+/* Search results */
+.advancedsearch {
+    border: 1pt solid #9c9c9c;
+}
+
+.advancedsearch td {
+    vertical-align: top;
+    background-color: #e5e5e5;    
+    border: 0px;
+}
+
+.advancedsearch td.searchfor {
+    font-weight: bold;
+}
+
+/*.advancedsearch input {
+    border: 1px solid #9c9c9c;
+    background-color: #fff;
+}*/
+
+.advancedsearch input[disabled] {
+    background-color: #eee;
+}
+
+.advancedsearch td.submit {
+    border-top: 1px solid #9c9c9c;
+    background-color: #fff;
+    text-align: right;
+}
+
+.advancedsearch optioni, select {
+    border: 1px solid #9c9c9c;
+    background-color: #fff;
+}
+
+
+.searchresults dt {
+    margin-top: 1em;
+    font-weight: normal;
+}
+
+.searchresults dd, .searchresults p {
+    font-size: 0.85em;
+}
+
+.searchresults .searchhitinfobar {
+    color: #008000;
+    margin-left: 15px;
+    margin-top: 0;
+}
+
+p.searchstats {
+    font-size: 0.8em;
+    text-align: right;
+    width: 100%;
+    background-color: #E6EAF0;
+    border-top: 1px solid #9088DC;
+    padding: 2px;
+}
+
+p.searchhint {
+    background-color: #E6EAF0;
+    border: 1px solid #9088DC;
+    padding: 2px;
+}
+
+.searchpages {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchpages tr, .searchpages td {
+    border: 0;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    color: #b93a58;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.searchpages td a, .searchpages td a:link {
+    text-decoration: underline;
+}
+
+/* MonthCalendar css */
+
+/* days without and with pages linked to them */
+a.cal-emptyday {
+    color: #777777;
+    text-align: center;
+}
+a.cal-usedday {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+/* general stuff: workdays, weekend, today */
+td.cal-workday {
+    color: white;
+/*    background-color: #DDDDFF;*/
+    background-color: rgb(0,51,153);
+    text-align: center;
+}
+td.cal-weekend {
+    color: white;
+    background-color: rgb(100,135,220);
+    text-align: center;
+}
+td.cal-today {
+    background-color: #CCFFCC;
+    border-style: solid;
+    border-width: 2pt;
+    border-color: rgb(253,160,91);
+    text-align: center;
+}
+
+td.cal-nottoday {
+    text-align: center;
+}
+
+/* invalid places on the monthly calendar sheet */
+td.cal-invalidday {
+    background-color: #e5e5e5;
+}
+/* links to prev/next month/year */
+a.cal-link {
+    text-decoration: none;
+}
+th.cal-header {
+    color: rgb(39,78,144);
+    background-color: rgb(140,170,230);
+    text-align: center;
+}
+
+/* for MonthCalendar mouseover info boxes */
+TABLE.tip {
+    color: black;
+    background-color: #FF8888;
+    font-size: small;
+    font-weight: normal;
+    border-style: solid;
+    border-width: 1px;
+}
+
+TH.tip {
+    background-color: #FF4444;
+    font-weight: bold;
+    text-align: center;
+}
+
+TD.tip {
+    text-align: left;
+}
+*[dir="rtl"] TD.tip {
+    text-align: right;
+}
+
+/* end MonthCalendar stuff */
+
+#message .hint {font-style: italic;}
+#message .info {
+    float: none;
+    font-size: 1em;
+    color: black;
+}
+#message .info:before {content: url('../img/icon-info.png'); margin: 0 0.2em;}
+#message .warning:before {content: url('../img/alert.png'); margin: 0 0.2em;}
+#message .error:before {content: url('../img/icon-error.png'); margin: 0 0.2em;}
+
+
+/* admonition start */
+#content div.caution, 
+#content div.important, 
+#content div.note, 
+#content div.tip, 
+#content div.warning {
+    border: 1pt solid #E5E5E5;
+    background-color: #F9F9FF;
+    color: black;
+    
+    margin: 10pt 30pt 10pt 30pt;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+    min-height: 64px; /*64=48+8+8 but doesn't work with IE*/
+    padding-left: 64px;
+}
+ 
+#content div.caution p, 
+#content div.important p, 
+#content div.note p, 
+#content div.tip p, 
+#content div.warning p {
+    margin-top: 8px; /*to align text with bg graphic*/
+}
+
+#content div.tip { background-image: url("../img/admon-tip.png"); }
+#content div.note { background-image: url("../img/admon-note.png"); }
+#content div.important { background-image: url("../img/admon-important.png"); }
+#content div.caution { background-image: url("../img/admon-caution.png"); }
+#content div.warning { background-image: url("../img/admon-warning.png"); }
+
+/* admonition end */
+
+
+
+
+/* ********************************************************* */
+/* custom css                                                */
+/* ********************************************************* */
+
+
+div#pagebottom { clear:both; }
+
+div#content li {
+	margin: 0.25em;
+}
+
+div#content table.navigation {
+	float: right;
+	margin: 1em;
+}
+
+#content div.rightside {
+	background-color: white;
+	float:right;
+ 	margin-left: 00px;
+	width: 200px;
+	padding: 10px;
+	padding-top: 0px;
+	border-left: 50px solid white;
+}
+
+.table-of-contents {
+	float: right;
+        border: 1px solid silver;
+	padding: 0px 0px 0px 0px;
+	clear: right;
+	max-width: 50%;
+        min-width: 30%;
+	margin: 0px 0px 5px 5px;
+	background-color: #E5E5E5;
+}
+
+#content p.table-of-contents-heading {
+	font-weight: bold;
+	margin: 0em;
+	padding: 1px;
+	border-width: 0em;
+	margin-bottom: 1em;
+	background-color: #E5E5E5;
+	background-color: silver;
+}
+
+div#page>div#content>p {
+	 margin: 0 0 1.0em 0;
+}
+
+div.BlikiSummary {
+	clear: right;	
+	float: right;
+	margin: 1em;
+	width: 50%;
+}
+
+.rechts {
+	float:right;
+}
+
+#content img.PersonFoto {
+	float:right;
+	padding: 10px;
+	margin-left: 10px;
+	border: 1px solid black; 
+}
+
+#iconbar {
+	float: right;
+	clear: both;
+}

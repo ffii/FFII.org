@@ -1,0 +1,42 @@
+/*  projection.css of MoinMoin theme "sinorca4moin" by David Linke.
+    $Id: projection.css 148 2007-12-27 11:30:36Z linke $
+*/
+
+@import url("screen.css");
+
+html { line-height: 1.5em; }
+
+#page {
+    margin: 0;
+    padding: 10px;
+    border-left: 0;
+}
+
+body, b, em, a, span, div, p, td {
+    font-size: 16pt;
+    line-height: 1.2em;
+}
+
+h1 { font-size: 24pt; }
+h2 { font-size: 20pt; }
+h3 { font-size: 18pt; }
+h4 { font-size: 16pt; }
+h5 { font-size: 16pt; }
+h6 { font-size: 14pt; }
+
+tt, pre { font-size: 16pt; }
+sup, sub { font-size: 12pt; }
+
+table.navigation {
+    float: right;
+    margin: 2px;
+}
+
+.navigation td, .navigation a {
+    font-size: 10pt;
+    padding: 2px;
+}
+
+#header, #sidebar, #footer, #timings, #credits, #interwiki, #pagelocation, #pageinfo, #sidebar {
+ display: none; }
+

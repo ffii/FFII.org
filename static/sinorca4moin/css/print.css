@@ -1,0 +1,72 @@
+/*  print.css of MoinMoin theme "sinorca4moin" by David Linke.
+    $Id: print.css 148 2007-12-27 11:30:36Z linke $
+*/
+
+/* content styles */
+
+html {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12pt;
+        line-height: 1.2em;
+}
+
+#pagelocation {
+    font-weight: bold;
+    padding: 0;
+}
+
+#page p {
+  margin: 0 0 0.25em 0;
+  padding: 0;
+}
+
+#page li {
+  margin: .25em 0;
+  padding: 0;
+}
+
+tt {
+	font-size: 0.8em;
+}
+
+body {
+    /* Give about 3.4cm in Mozilla/Firefox and about 2.2cm in Safari */
+	margin: 1.5cm;
+}
+
+a, a:visited, a.nonexistent, a.badinterwiki {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.info a {
+    color: gray;
+}
+
+pre {
+	font-size: 10pt;
+}
+
+a.interwiki:before, a.badinterwiki:before {
+	content: attr(title) ":";
+}
+
+a.interwiki img, a.badinterwiki img {
+	display: none;
+}
+
+.footnotes div {
+	width: 5em;
+	border-top: 1pt solid gray;
+}
+
+/* user interface styles */
+
+#header, #sidebar, #footer, #timings, #credits, #interwiki {
+	display: none;
+}
+

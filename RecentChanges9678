@@ -1,0 +1,153 @@
+<!--: spam
+Content-Type: text/html
+
+<body><font style="color: white; font-size: 1px"> -->
+<body><font style="color: white; font-size: 1px"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font>
+<div class="cgitb">
+<script type="text/javascript">
+function toggleDebugInfo() {
+    var tb = document.getElementById('debug-info');
+    if (tb == null) return;
+    tb.style.display = tb.style.display ? '' : 'none';
+}
+</script>
+<style type="text/css">
+.cgitb {background: #E6EAF0; border: 1px solid #4D6180; direction: ltr;}
+.cgitb p {margin: 0.5em 0; padding: 5px 10px; text-align: left;}
+.cgitb ol {margin: 0}
+.cgitb li {margin: 0.25em 0;}
+.cgitb h1, .cgitb h2, .cgitb h3 {padding: 5px 10px; margin: 0; background: #4D6180; color: white;}
+.cgitb h1 {font-size: 1.3em;}
+.cgitb h2 {font-size: 1em; margin-top: 1em;}
+.cgitb h3 {font-size: 1em;}
+.cgitb .frames {margin: 0; padding: 0; color: #606060}
+.cgitb .frames li {display: block;}
+.cgitb .call {padding: 5px 10px; background: #A3B4CC; color: black}
+.cgitb .context {padding: 0; font-family: monospace; }
+.cgitb .context li {display: block; white-space: pre;}
+.cgitb .context li.highlight {background: #C0D3F0; color: black}
+.cgitb .variables {padding: 5px 10px; font-family: monospace;}
+.cgitb .variables li {display: inline;}
+.cgitb .variables li:after {content: ", ";}
+.cgitb .variables li:last-child:after {content: "";}
+.cgitb .exception {border: 1px solid #4D6180; margin: 10px}
+.cgitb .exception h3 {background: #4D6180; color: white;}
+.cgitb .exception p {color: black;}
+.cgitb .exception ul {padding: 0 10px; font-family: monospace;}
+.cgitb .exception li {display: block;}
+
+.cgitb .buttons {margin: 0.5em 0; padding: 5px 10px;}
+.cgitb .buttons li {display: inline; margin: 0; padding: 0 0.25em;}
+</style><h1>AttributeError</h1>
+<p>RssGenerator instance has no attribute '_out'</p>
+<p>If you want to report a bug, please save this page and  attach it to your bug report.</p>
+<ul class="buttons">
+<li><a href="javascript:toggleDebugInfo()">Show debugging information</a>
+</li>
+<li><a href="http://moinmo.in/MoinMoinBugs">Report bug</a>
+</li>
+<li><a href="http://moinmo.in/FrontPage">Visit MoinMoin wiki</a>
+</li>
+</ul>
+<div id="debug-info">
+<script type="text/javascript">toggleDebugInfo()</script>
+<div class="traceback"><h2>Traceback</h2>
+<p>A problem occurred in a Python script.  Here is the
+        sequence of function calls leading up to the error, in the
+        order they occurred.</p>
+<ol class="frames">
+<li><p class="call"><a href="file:///usr/local/moin18/MoinMoin/request/__init__.py">/usr/local/moin18/MoinMoin/request/__init__.py</a>
+ in <strong>run</strong>
+(self=&lt;MoinMoin.request.request_fcgi.Request object&gt;)</p>
+<ol class="context">
+<li> 1309                          self.page.send_page()
+</li>
+<li> 1310                      else:
+</li>
+<li class="highlight"> 1311                          handler(self.page.page_name, self)
+</li>
+<li> 1312  
+</li>
+<li> 1313              # every action that didn't use to raise MoinMoinFinish must call this now:
+</li>
+
+</ol>
+<ul class="variables">
+<li><strong>handler</strong>
+ = &lt;function execute&gt;</li>
+<li><strong>self</strong>
+ = &lt;MoinMoin.request.request_fcgi.Request object&gt;</li>
+<li>self.<strong>page</strong>
+ = &lt;MoinMoin.Page.Page object&gt;</li>
+<li>self.page.<strong>page_name</strong>
+ = u'RecentChanges'</li>
+</ul>
+</li>
+<li><p class="call"><a href="file:///usr/local/moin18/MoinMoin/action/rss_rc.py">/usr/local/moin18/MoinMoin/action/rss_rc.py</a>
+ in <strong>execute</strong>
+(pagename=u'RecentChanges', request=&lt;MoinMoin.request.request_fcgi.Request object&gt;)</p>
+<ol class="context">
+<li>  123          # start SAX stream
+</li>
+<li>  124          handler.startDocument()
+</li>
+<li class="highlight">  125          handler._out.write(
+</li>
+<li class="highlight">  126              '&lt;!--\n'
+</li>
+<li class="highlight">  127              '    Add an "items=nnn" URL parameter to get more than the default 15 items.\n'
+</li>
+
+</ol>
+<ul class="variables">
+<li><strong>handler</strong>
+ = &lt;MoinMoin.wikixml.util.RssGenerator instance&gt;</li>
+<li>handler._out <em>undefined</em>
+</li>
+<li><strong>items_limit</strong>
+ = 100</li>
+<li><strong>max_items</strong>
+ = 15</li>
+<li><strong>unique</strong>
+ = 1</li>
+<li><strong>diffs</strong>
+ = 0</li>
+<li><strong>ddiffs</strong>
+ = 1</li>
+</ul>
+</li>
+</ol>
+<div class="exception"><h3>AttributeError</h3>
+<p>RssGenerator instance has no attribute '_out'</p>
+<ul>
+<li>args = ("RssGenerator instance has no attribute '_out'",)</li>
+<li>message = "RssGenerator instance has no attribute '_out'"</li>
+</ul>
+</div>
+</div>
+<h2>System Details</h2>
+<ul class="system">
+<li>Date: Tue, 05 Feb 2019 09:46:04 +0000</li>
+<li>Platform: Linux vic 3.16.0-4-amd64 #1 SMP Debian 3.16.39-1 (2016-12-30) x86_64</li>
+<li>Python: Python 2.7.9 (/usr/bin/python)</li>
+<li>MoinMoin: Release 1.8.4 (release)</li>
+</ul>
+</div>
+
+    
+<!-- The above is a description of an error in a Python program,
+     formatted for a Web browser. In case you are not reading this 
+     in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/usr/local/moin18/MoinMoin/request/__init__.py", line 1311, in run
+    handler(self.page.page_name, self)
+  File "/usr/local/moin18/MoinMoin/action/rss_rc.py", line 125, in execute
+    handler._out.write(
+AttributeError: RssGenerator instance has no attribute '_out'
+
+-->
+</div>
+

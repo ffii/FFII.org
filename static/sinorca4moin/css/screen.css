@@ -1,0 +1,507 @@
+/* screen.css of MoinMoin theme "sinorca4moin" by David Linke.
+    $Id: screen.css 157 2007-12-29 21:31:15Z linke $
+*/
+
+/* ##### Common Styles ##### */
+
+body {
+  color: black;
+  margin: 0;
+  padding: 0;
+  line-height: 1.0em;
+  /* line-height: 0.8em; */
+}
+
+a {text-decoration: none;
+}
+
+
+/* ##### Header ##### */
+
+/* Line for login */
+.superHeader {
+  color: white;
+  /* background-color:black; test */
+  background-color: #B0C4DE; /*lightsteelblue*/ /*rgb(100,135,220);*/
+ /* height: 2.4em;
+  font-size: 0.8em; */
+  height: 1.3em;
+  font-size:0.6em;
+}
+
+.superHeader a {
+  color: white;
+  text-decoration: none;
+}
+
+.superHeader a:hover {
+  text-decoration: underline;
+}
+
+.superHeader ul {
+  display: inline;
+}
+
+.superHeader li {
+  display: inline;
+  padding: 0;
+  margin: -10px;
+}
+
+.superHeader .left {
+  text-align: left;
+  float: left;
+  margin: 0.5ex 0px 0.5ex;
+  padding: 0 0 0 10px;
+  display: inline; /* forces IE to calc correct margin */
+}
+
+.superHeader .right {
+  text-align: right;
+  float: right;
+  margin: 0.5ex 10px 0.5ex 0px;
+  padding: 0;
+  display: inline; /* forces IE to calc correct margin */
+}
+
+.midHeader {
+  color: #B0C4DE; /* rgb(39,78,144);*/ /* Schrift */
+  background-color: #B0C4DE; /*lightsteelblue*/ /*rgb(140,170,230);*/
+  margin: 0;
+  font-size: 3.2em;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+
+.midHeader a {
+  text-decoration: none;    
+  color: #B0C4DE; /*rgb(39,78,144);*/
+  margin: 5px 0px 5px 10px;
+}
+
+#logo {
+  /* contains image and/or text link */
+  display: inline;
+}
+
+#logo img {
+  /* logo image */
+  vertical-align: bottom;
+  margin: 5px 0px 5px 0px;
+}
+
+#username {
+  white-space: nowrap;
+}
+
+#username ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+#username li {
+  padding: 0.1ex 15px;
+}
+
+.subHeader {
+  color: white;
+  background-color: #4682B4; /* steelblue */ /* rgb(0,51,153); */
+  font-size: 0.9em;
+  margin: 0;
+  padding: 1ex 1ex 1ex 1.5mm;
+}
+
+.subHeader a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0.75ex 0 0.5ex;
+}  
+
+.subHeader a:hover {
+  text-decoration: underline;
+}
+
+.superHeader .highlight, .subHeader .highlight {
+  color: rgb(253,160,91);
+}
+
+
+/* ##### Side Bar ##### */
+
+#sidebar {
+/*  margin: 5px, 0px;*/
+  float: left;
+/*  background-color: green; for debugging IE surprises*/
+  width: 212px;
+  padding: 0;	
+  overflow: hidden;
+  display: inline; /* forces IE to calc correct margin */
+}
+
+#sidebar a {
+  color: #4682B4; /* steelblue */ /* rgb(0,102,204);*/
+  background-color: transparent;
+  text-decoration: none;
+  margin: 0;
+  line-height: 1.5em;
+  display: block;
+}
+
+#sidebar .disabled {
+ line-height: 1.5em;
+ display: block;
+}
+
+#sidebar .current {
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(253,160,91);
+}
+
+#sidebar a:hover {
+  color: white;
+  background-color: #4682B4; /* steelblue */ /* rgb(100,135,220); */
+  text-decoration: none;
+}
+
+.sidepanel {
+  margin: 5px;
+  margin-top:15px;
+  margin-right:0px;
+  margin-left:10px;
+  float: left;
+  width: 200px;	
+  border: 1px solid #9c9c9c;
+  background:  #F8F8FF; /* ghostwhite */ /* #e5e5e5; */
+  overflow: hidden; /* new 18:11 */
+  display: inline; /* forces IE to calc correct margin */
+}
+
+.sidepanel h1 {
+  margin: 0;
+  padding: 0.4em 10px;
+  border: none;
+  font-size: 1em;
+  color: black;
+}
+
+.sidepanel li {
+  margin: 0;
+  padding: 0.1ex 15px;
+}
+
+.sidepanel ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.actionsmenu select{
+  width: 180px;
+}
+
+
+/* ===== Iconbar ===== */
+#iconbar {
+  float: right;
+  margin: 10px 0px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+*[dir="rtl"] #iconbar {
+  float: right;
+  margin: 5px 10px 5px 0;
+}
+
+#iconbar li {
+  display: inline;
+}
+
+#iconbar img {
+  padding: 1px;
+}
+
+
+/* title of the current wiki-page */
+#pagelocation {
+  padding: 10px 0;
+  color: rgb(100,135,220);
+  color: black;
+}
+
+
+/* ##### Main Copy ##### */
+
+#page {
+  color: black;
+  background-color: transparent;
+/*  background-color: yellow; for debugging IE surprises*/
+/*  text-align: justify; */
+  line-height: 1.4em;
+  /* margin: 0 4em 1em 240px; */
+  margin-top: 0px;
+  margin-left: 245px;
+  margin-right: 2.6em;
+  margin-bottom: 0px;
+  padding: 0px 0px 10px 0px;
+}
+
+#page p {
+  margin: 0em 0em 0.25em 0em;
+  padding: 0;
+  text-align: justify;
+}
+
+/* Use same margin for normal list item as for li p (see common.css) */
+#page li {
+  padding: 0;
+  margin: 0.25em 0;
+  line-height: 1.4em;
+}
+
+#page a {
+  color: #4682B4; /* steelblue */ /* rgb(0,102,204); */
+  background-color: transparent;
+}
+
+#page a.nonexistent, a.badinterwiki {
+  color: #900000;
+  border-bottom: dotted 1px;
+}
+
+#page a:hover {
+  text-decoration: underline;
+}
+
+dl {
+  margin: 1em 1ex 2em 1ex;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+dd {
+  margin: 0 0 0.5em 1em;
+  padding: 0;
+}
+
+pre {
+  background-color: #FFF8ED;
+}
+
+/* ##### Footer ##### */
+
+#footer {
+  color: white;
+  background-color: #4682B4; /* steelblue */ /* rgb(100,135,220); */
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0.2ex 2.5mm;
+  clear: both;
+}
+
+#footer a {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline ;
+}
+
+#footer a:hover {
+  text-decoration: none;
+}
+
+
+/* DL addition from rightsidebar/classic/modern screen.css*/
+
+#pagetrail {
+  clear: left;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  height: 2em;
+  border-bottom: 1px solid rgb(153,153,153);
+}
+
+*[dir="rtl"] #pagetrail {
+  clear: right;
+}
+
+#pagetrail li  {
+  float: left;
+  display: block;
+  margin: 2px 0 3px 5px;
+  padding: 0 2px;
+}
+
+*[dir="rtl"] #pagetrail li {
+  float: right;
+}
+
+#pagetrail a {
+  text-decoration: none;
+  color: rgb(0,102,204);
+}
+
+/* XXX Warning: non-ascii characters! */
+#pagetrail li:after {
+  content: " »";
+}
+
+/* not css 2.1 valid
+#pagetrail li:last-child:after {
+  content: "";
+}
+*/
+
+#searchform {
+  float: right;
+  margin: 5px 10px 0px;
+  padding: 0;
+  white-space: nowrap;
+  display: inline;
+}
+
+*[dir="rtl"] #searchform {
+  float: left;
+}
+
+#searchform form div {
+  display: inline;
+}
+
+.editbar form, .editbar form div {
+    display: inline;
+    text-align: center;
+}
+
+#message {
+  margin: 15px 1em 5px 225px;
+  padding: 0.5ex;
+  background-color: #FFFFCC;
+  border: 1px solid red;
+  line-height: 1.2em;
+}
+
+#message p{
+  margin: 0;
+}
+
+#message a{
+  margin: 0;
+  color: rgb(0,102,204);
+}
+
+/* We use here dumb css1 ids because of IE suckiness */
+#editor-comment {width: 70%;}
+#editor-textarea {width: 99%;}
+
+#pagebottom {
+/*  clear: both;*/
+}
+
+#preview {
+  border: 2px solid #e5e5e5;
+  padding: .5em;
+  background: url(../img/draft.png);
+}
+
+#textcha {
+    font-size: 100%;
+    margin-top: 0.5em;
+    border: 2px solid #FF8888;
+    color: black;
+    vertical-align: middle;
+    padding: 3px 2px;
+}
+
+#textcha-answer {
+    border: 2px solid #000000;
+    padding: 3px 2px;
+}
+
+.diff {
+  width:99%;
+}
+
+.diff-title {
+  background-color: #C0C0C0;
+}
+
+.diff-added {
+  background-color: #E0FFE0;
+  vertical-align: sub;
+}
+
+.diff-removed {
+  background-color: #FFFFE0;
+  vertical-align: sub;
+}
+
+.diff-added span {
+  background-color: #80FF80;
+}
+
+.diff-removed span {
+  background-color: #FFFF80;
+}
+
+.searchresult dd span {
+  font-weight: bold;
+}
+
+#version{
+  margin: 5px 5px;
+  padding: 0px;
+  text-align: center;
+  font-size: 1em; 
+  color: #6C7680;
+}
+
+#credits{
+  margin: 5px 5px;
+  padding: 0px;
+  text-align: center;
+  font-size: 1em; 
+}
+
+#timings{
+  margin: 5px 0px;
+  padding: 0;
+  text-align: center;
+  font-size: 0.8em; 
+  color: #6C7680;
+}
+#credits li {
+  display: inline;
+  padding: 0 10px;
+}
+
+#timings li {
+  display: inline;
+  padding: 0 5px;
+}
+
+#credits img {
+  vertical-align: middle;
+}
+
+/* ********************************************************* */
+/* custom content */
+/* ********************************************************* */
+
+#previewbelow {
+	border-top: 1px solid black;
+	margin-top: 2em;
+}
+
